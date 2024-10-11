@@ -12,10 +12,11 @@ export function ProjectCarousel() {
 
     const projectsProps = {
         width: '400px',
+        backgroundColor: '#FFFFFF',
         padding: '1.25rem',
         border: '5px solid #F39422',
         borderRadius: '15px',
-        boxShadow: '5px 5px 5px #999999',
+        boxShadow: '5px 5px 5px #293A80',
         "--swiper-pagination-color": '#F39422',
         "--swiper-pagination-bullet-inactive-color": '#F39422',
     }
@@ -29,10 +30,14 @@ export function ProjectCarousel() {
     ];
 
     const projectSlides = (projects: string[]) => {
-        const p : ReactElement[] = [];
+        const p: ReactElement[] = [];
         projects.forEach((project: string) => {
             p.push(
-                <SwiperSlide>
+                <SwiperSlide
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                    }}>
                     <img width={200} height={200} src={project} alt="Project Image"/>
                 </SwiperSlide>
             );

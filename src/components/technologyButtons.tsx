@@ -1,9 +1,10 @@
 import {ReactElement} from "react";
+import "../App.css";
 
 export function TechnologyButtons() {
 
     const buttonContainerProps = {
-        width: '300px',
+        width: '450px',
         display: 'flex',
         flexFlow: 'row wrap',
         justifyContent: 'space-evenly',
@@ -11,14 +12,14 @@ export function TechnologyButtons() {
 
     const buttonProps = {
         display: 'flex',
-        width: '64px',
-        height: '64px',
+        width: '80px',
+        height: '80px',
         backgroundColor: '#F39422',
         alignItems: 'center',
         justifyContent: 'center',
-        margin: '5px',
+        margin: '15px',
         borderRadius: '15px',
-        boxShadow: '5px 5px 5px #999999',
+        boxShadow: '5px 5px 5px #293A80',
     }
 
     const buttons: string[] = [
@@ -36,9 +37,12 @@ export function TechnologyButtons() {
         const b: ReactElement[] = [];
         buttons.forEach((button) => {
             b.push(
-                <div style={buttonProps}>
+                <button style={buttonProps}
+                    className={"button"}
+                >
+                    <a href={""}/>
                     <img width={32} height={32} src={button}/>
-                </div>
+                </button>
             );
         });
         return b;
