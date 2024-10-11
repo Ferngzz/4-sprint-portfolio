@@ -6,43 +6,44 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import {ReactElement} from "react";
 
 export function ProjectCarousel() {
 
-    const props = {
-        width: '300px',
+    const projectsProps = {
+        width: '400px',
         padding: '1.25rem',
-        border: '6px solid #EAEAEA',
-        borderRadius: '30px',
-        boxShadow: '5px 5px 5px #000000',
-        "--swiper-pagination-color": '#000000',
-        "--swiper-pagination-bullet-inactive-color": '#000000',
+        border: '5px solid #F39422',
+        borderRadius: '15px',
+        boxShadow: '5px 5px 5px #999999',
+        "--swiper-pagination-color": '#F39422',
+        "--swiper-pagination-bullet-inactive-color": '#F39422',
     }
 
-    
-    const projects:string[] = [
+
+    const projects: string[] = [
         "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
-        "https://static.vecteezy.com/system/resources/previews/033/302/785/non_2x/onion-with-ai-generated-free-png.png",
-        "https://acdn.mitiendanube.com/stores/002/296/660/products/tomate-png-1280x7201-36283e6b10aef947e616606979966621-1024-1024.png",
-        "https://sitioaborigene.com.br/wp-content/uploads/2021/08/mandioca.png",
+        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
+        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
+        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
     ];
 
     const projectSlides = (projects: string[]) => {
-        const p = [];
+        const p : ReactElement[] = [];
         projects.forEach((project: string) => {
             p.push(
                 <SwiperSlide>
-                    <img height={200} src={project}/>
+                    <img width={200} height={200} src={project} alt="Project Image"/>
                 </SwiperSlide>
             );
         });
         return p;
-    };
+    }
 
     return (
-        <div  className="projectCarousel">
+        <div className="projectCarousel">
             <Swiper
-                style={props}
+                style={projectsProps}
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={400}
                 slidesPerView={1}
@@ -50,7 +51,7 @@ export function ProjectCarousel() {
                 pagination={{clickable: true}}
                 autoplay={{delay: 5000}}
             >
-                { projectSlides(projects) }
+                {projectSlides(projects)}
             </Swiper>
         </div>
     );
