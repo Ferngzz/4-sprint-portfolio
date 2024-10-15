@@ -19,7 +19,8 @@ export function TechnologyButtons() {
         justifyContent: 'center',
         margin: '15px',
         borderRadius: '15px',
-        boxShadow: '5px 5px 5px #293A80',
+        borderColor: 'transparent',
+        boxShadow: ' 1px 1px 1px #293A80',
     }
 
     const buttons: string[] = [

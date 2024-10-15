@@ -16,7 +16,7 @@ export function ProjectCarousel() {
         padding: '1.25rem',
         border: '5px solid #F39422',
         borderRadius: '15px',
-        boxShadow: '5px 5px 5px #293A80',
+        boxShadow: '2px 2px 2px #293A80',
         "--swiper-pagination-color": '#F39422',
         "--swiper-pagination-bullet-inactive-color": '#F39422',
     }
