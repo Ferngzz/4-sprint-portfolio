@@ -27,9 +27,9 @@ export function TechnologyButtons() {
         'src/assets/javascript-svgrepo-com.svg',
         'src/assets/css-3-svgrepo-com.svg',
         'src/assets/html-5-svgrepo-com.svg',
-        'src/assets/kotlin-1-logo-svgrepo-com.svg',
-        'src/assets/java-svgrepo-com(1).svg',
         'src/assets/react.svg',
+        'src/assets/java-svgrepo-com(1).svg',
+        'src/assets/kotlin-1-logo-svgrepo-com.svg',
         'src/assets/jb-intellij-idea-svgrepo-com.svg',
         'src/assets/github-142-svgrepo-com.svg',
     ]

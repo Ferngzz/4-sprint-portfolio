@@ -17,7 +17,7 @@ export function ProjectCarousel() {
         border: '5px solid #F39422',
         borderRadius: '15px',
         boxShadow: '2px 2px 2px #293A80',
-        "--swiper-pagi  nation-color": '#F39422',
+        "--swiper-pagination-color": '#F39422',
         "--swiper-pagination-bullet-inactive-color": '#F39422',
     }
 
