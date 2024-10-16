@@ -14,24 +14,24 @@ export function TechnologyButtons() {
         display: 'flex',
         width: '80px',
         height: '80px',
-        backgroundColor: '#F39422',
+        backgroundColor: '#FFFFFF',
         alignItems: 'center',
         justifyContent: 'center',
         margin: '15px',
         borderRadius: '15px',
-        borderColor: 'transparent',
+        border: '5px solid #F39422',
         boxShadow: ' 1px 1px 1px #293A80',
     }
 
     const buttons: string[] = [
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
-        'src/assets/github-logo.png',
+        'src/assets/javascript-svgrepo-com.svg',
+        'src/assets/css-3-svgrepo-com.svg',
+        'src/assets/html-5-svgrepo-com.svg',
+        'src/assets/kotlin-1-logo-svgrepo-com.svg',
+        'src/assets/java-svgrepo-com(1).svg',
+        'src/assets/react.svg',
+        'src/assets/jb-intellij-idea-svgrepo-com.svg',
+        'src/assets/github-142-svgrepo-com.svg',
     ]
 
     const genButton = (buttons: string[]) => {
@@ -42,7 +42,7 @@ export function TechnologyButtons() {
                     className={"button"}
                 >
                     <a href={""}/>
-                    <img width={32} height={32} src={button}/>
+                    <img width={48} height={48} src={button}/>
                 </button>
             );
         });

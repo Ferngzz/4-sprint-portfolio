@@ -1,10 +1,8 @@
-html, body, #root, .App {
+html, body, #root, .app {
     height: 100%;
     width: 100%;
-}
+    background: linear-gradient(0deg, rgba(41, 58, 128, 1) 0%, rgba(83, 126, 197, 1) 100%);
 
-body {
-    background-color: #537EC5;
 }
 
 .app {
@@ -24,37 +22,69 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .projectCarousel {
-    width: 450px;
-    padding-left: 150px;
-    padding-top: 10%;
-
-}
-
-.description {
-    width: 600px;
-    padding-left: 250px;
-    padding-top: 20%;
-}
-
-.descriptionSlide {
-    background-color: #537EC5;
-    font-size: 40px;
-    font-family: Inter, sans-serif;
-    color: #010038;
+    padding-top: 200px;
 }
 
 .technologyButtons {
-    padding-left: 200px;
+    padding-bottom: 10%;
 }
 
 .header {
-    padding-right: 15%;
-    background-color: #F39422;
+    padding-right: 19vw;
+    background: linear-gradient(0deg, rgba(255, 152, 29, 1) 0%, rgba(227, 139, 32, 1) 100%);
 }
-.header img{
-    padding-right: 15px;
+
+.header img {
+}
+
+.github, .linkedin, .contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 1vw;
+}
+
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name {
+    padding-bottom: 10%;
+    font-size: 50px;
+    font-family: Inter, sans-serif;
+}
+
+.description2 {
+    font-size: 80px;
+    color: #293A80;
+    font-family: Inter, sans-serif;
+    text-shadow: 2px 2px 2px #293A80;
 }
