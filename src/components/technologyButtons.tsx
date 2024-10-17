@@ -47,42 +47,42 @@ export function TechnologyButtons() {
 
     const js = new Technologies(
         'JavaScript',
-        'src/assets/javascript-icon.svg',
+        'images/javascript-icon.svg',
         texts.js
     )
     const css = new Technologies(
         'CSS',
-        'src/assets/css-icon.svg',
+        'images/css-icon.svg',
         texts.css
     )
     const html = new Technologies(
         'HTML',
-        'src/assets/html-icon.svg',
+        'images/html-icon.svg',
         texts.html
     )
     const react = new Technologies(
         'ReactJS',
-        'src/assets/react-icon.svg',
+        'images/react-icon.svg',
         texts.react
     )
     const java = new Technologies(
         'Java',
-        'src/assets/java-icon.svg',
+        'images/java-icon.svg',
         texts.java
     )
     const kotlin = new Technologies(
         'Kotlin',
-        'src/assets/kotlin-icon.svg',
+        'images/kotlin-icon.svg',
         texts.kotlin
     )
     const intellij = new Technologies(
         'IntelliJ IDEA',
-        'src/assets/intellij-icon.svg',
+        'images/intellij-icon.svg',
         texts.intellij
     )
     const git = new Technologies(
         'Git',
-        'src/assets/git-icon.svg',
+        'images/git-icon.svg',
         texts.git
     )
 

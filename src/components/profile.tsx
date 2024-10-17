@@ -11,7 +11,7 @@ export function Profile() {
             className="profileContainer"
         >
             <div className="rotationContainer"/>
-            <img height={384} width={384} src={"src/assets/profile-picture.jpeg"}/>
+            <img height={384} width={384} src={"images/profile-picture.jpeg"}/>
 
         </div>
     );
