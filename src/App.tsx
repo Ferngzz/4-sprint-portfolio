@@ -4,7 +4,8 @@ import {ProjectCarousel} from "./components/projectCarousel.tsx";
 import {TechnologyButtons} from "./components/technologyButtons.tsx";
 import {Header} from "./components/header.tsx";
 import {Profile} from "./components/profile.tsx";
-import {Description2} from "./components/description2.tsx";
+import {Name} from "./components/name.tsx";
+import {Description} from "./components/description.tsx";
 
 export function App() {
 
@@ -15,7 +16,8 @@ export function App() {
                 </div>
             <div className="app">
                 <div className="column left">
-                    <Description2/>
+                    <Name/>
+                    <Description/>
                     <ProjectCarousel/>
                 </div>
                 <div className="column right">

@@ -24,13 +24,13 @@ export function TechnologyButtons() {
     }
 
     const buttons: string[] = [
-        'src/assets/javascript-svgrepo-com.svg',
-        'src/assets/css-3-svgrepo-com.svg',
-        'src/assets/html-5-svgrepo-com.svg',
-        'src/assets/react.svg',
-        'src/assets/java-svgrepo-com(1).svg',
-        'src/assets/kotlin-1-logo-svgrepo-com.svg',
-        'src/assets/jb-intellij-idea-svgrepo-com.svg',
+        'src/assets/javascript-icon.svg',
+        'src/assets/css-icon.svg',
+        'src/assets/html-icon.svg',
+        'src/assets/react-icon.svg',
+        'src/assets/java-icon.svg',
+        'src/assets/kotlin-icon.svg',
+        'src/assets/intellij-icon.svg',
         'src/assets/github-142-svgrepo-com.svg',
     ]
 

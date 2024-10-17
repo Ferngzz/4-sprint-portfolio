@@ -1,29 +1,28 @@
 export function Header() {
 
-    const headerProps = {
-        display: 'flex',
-        width: '100%',
-        height: '70px',
-        alignItems: 'center',
-        justifyContent: 'end',
-    }
 
     return (
-        <div className="header"
-             style={headerProps}
-        >
-            <button className="github">
-                <img width={48} height={48} src={'src/assets/github-svgrepo-com(1).svg'}/>
-                <text>GitHub</text>
-            </button>
-            <button className="linkedin">
-                <img width={48} height={48} src={'src/assets/linkedin-svgrepo-com.svg'}/>
-                <text>LinkedIn</text>
-            </button>
-            <button className="contact">
-                <img width={48} height={48} src={'src/assets/mail-svgrepo-com.svg'}/>
-                <text>Contact</text>
-            </button>
+        <div className="header">
+            <a href={"https://github.com/Ferngzz"} className="github">
+                <button>
+                    <img width={32} height={32} src={'src/assets/github-header-black.svg'}/>
+                    <text>GitHub</text>
+                </button>
+            </a>
+
+            <a href={"https://www.linkedin.com/in/fernando-gazzana-4554a3195/"} className="linkedin">
+                <button>
+                    <img width={32} height={32} src={'src/assets/linkedin-header-black.svg'}/>
+                    <text>LinkedIn</text>
+                </button>
+            </a>
+
+            <a href={""} className="contact">
+                <button>
+                    <img width={32} height={32} src={'src/assets/mail-header-black.svg'}/>
+                    <text>Contact</text>
+                </button>
+            </a>
         </div>
     );
 }
