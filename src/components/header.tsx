@@ -17,14 +17,14 @@ export function Header() {
 
     return (
         <div className="header">
-            <a href={"https://github.com/Ferngzz"} className="github">
+            <a href={"https://github.com/Ferngzz"} className="github" target="_blank">
                 <button>
                     <img width={32} height={32} src={'images/github-header-black.svg'} alt="GitHub Logo"/>
                     <text>GitHub</text>
                 </button>
             </a>
 
-            <a href={"https://www.linkedin.com/in/fernando-gazzana-4554a3195/"} className="linkedin">
+            <a href={"https://www.linkedin.com/in/fernando-gazzana-4554a3195/"} className="linkedin" target="_blank">
                 <button>
                     <img width={32} height={32} src={'images/linkedin-header-black.svg'} alt="LinkedIn Logo"/>
                     <text>LinkedIn</text>
