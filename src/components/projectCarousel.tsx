@@ -1,19 +1,23 @@
-import {Navigation, Pagination, Autoplay} from 'swiper/modules';
-
+import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
-
+import projectData from "../assets/texts/projectData.json"
+import {Project} from "../interfaces/Project.tsx"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import {ReactElement} from "react";
 
-export function ProjectCarousel() {
+
+interface ProjectCarouselProps {
+    onProjectSelect?: (project: Project) => void
+}
+
+export function ProjectCarousel(props: ProjectCarouselProps) {
 
     const projectsProps = {
         width: '400px',
-        backgroundColor: '#FFFFFF',
-        padding: '1.25rem',
+        backgroundColor: 'transparent',
         border: '5px solid #F39422',
         borderRadius: '15px',
         boxShadow: '2px 2px 2px #293A80',
@@ -22,31 +26,36 @@ export function ProjectCarousel() {
     }
 
 
-    const projects: string[] = [
-        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
-        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
-        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
-        "https://superprix.vteximg.com.br/arquivos/ids/175172-600-600/Batata-Especial--1-unidade-aprox.-200g-.png?v=636294173813730000",
+    const projects: Project[] = [
+        projectData.climaApp,
+        projectData.calculadora,
     ];
 
-    const projectSlides = (projects: string[]) => {
+    const projectSlides = (projects: Project[]) => {
         const p: ReactElement[] = [];
-        projects.forEach((project: string) => {
+        projects.forEach((project: Project) => {
             p.push(
                 <SwiperSlide
+                    onClick={() => {
+                        props.onProjectSelect?.(project)
+                    }}
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
                     }}>
-                    <img width={200} height={200} src={project} alt="Project Image"/>
+                    <img src={project.image} alt="Project Image"/>
                 </SwiperSlide>
             );
         });
         return p;
     }
 
+
     return (
         <div className="projectCarousel">
+            <div>
+                <text>Projects</text>
+            </div>
             <Swiper
                 style={projectsProps}
                 modules={[Navigation, Pagination, Autoplay]}

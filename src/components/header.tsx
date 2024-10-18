@@ -1,4 +1,18 @@
+import {
+    Modal,
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalHeader,
+    ModalOverlay,
+    useDisclosure
+} from "@chakra-ui/react";
+
+import contact from "../assets/texts/contact.json"
+
 export function Header() {
+
+    const {isOpen, onOpen, onClose} = useDisclosure();
 
 
     return (
@@ -17,12 +31,33 @@ export function Header() {
                 </button>
             </a>
 
-            <a href={""} className="contact">
-                <button>
+            <a className="contact">
+                <button
+                    onClick={onOpen}
+                >
                     <img width={32} height={32} src={'images/mail-header-black.svg'} alt="Contact Logo"/>
                     <text>Contact</text>
                 </button>
             </a>
+            <Modal
+                closeOnOverlayClick={true}
+                isOpen={isOpen}
+                onClose={onClose}
+                isCentered
+            >
+                <ModalOverlay/>
+                <ModalContent>
+                    <ModalHeader className="modalHeader">
+                        <text>Contact:</text>
+                    </ModalHeader>
+                    <ModalCloseButton/>
+                    <ModalBody>
+                        <text>Phone: {contact.phone}</text>
+                        <br/>
+                        <text>E-mail: {contact.email}</text>
+                    </ModalBody>
+                </ModalContent>
+            </Modal>
         </div>
     );
 }

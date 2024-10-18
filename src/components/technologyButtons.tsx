@@ -15,13 +15,15 @@ export function TechnologyButtons() {
 
     class Technologies {
         technology: string;
-        url: string;
+        icon: string;
         description: string;
+        url: string
 
-        constructor(technology: string, url: string, description: string) {
+        constructor(technology: string, icon: string, description: string, url: string) {
             this.technology = technology;
-            this.url = url;
+            this.icon = icon;
             this.description = description;
+            this.url = url;
         }
     }
 
@@ -48,42 +50,50 @@ export function TechnologyButtons() {
     const js = new Technologies(
         'JavaScript',
         'images/javascript-icon.svg',
-        texts.js
+        texts.js,
+        'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     )
     const css = new Technologies(
         'CSS',
         'images/css-icon.svg',
-        texts.css
+        texts.css,
+        'https://developer.mozilla.org/en-US/docs/Web/CSS'
     )
     const html = new Technologies(
         'HTML',
         'images/html-icon.svg',
-        texts.html
+        texts.html,
+        'https://developer.mozilla.org/en-US/docs/Web/HTML'
     )
     const react = new Technologies(
-        'ReactJS',
+        'React',
         'images/react-icon.svg',
-        texts.react
+        texts.react,
+        'https://react.dev/reference/react'
     )
     const java = new Technologies(
         'Java',
         'images/java-icon.svg',
-        texts.java
+        texts.java,
+        'https://docs.oracle.com/en/java/javase/23/'
     )
     const kotlin = new Technologies(
         'Kotlin',
         'images/kotlin-icon.svg',
-        texts.kotlin
+        texts.kotlin,
+        'https://kotlinlang.org/docs/home.html'
     )
     const intellij = new Technologies(
         'IntelliJ IDEA',
         'images/intellij-icon.svg',
-        texts.intellij
+        texts.intellij,
+        'https://www.jetbrains.com/help/idea/getting-started.html'
     )
     const git = new Technologies(
         'Git',
         'images/git-icon.svg',
-        texts.git
+        texts.git,
+        'https://git-scm.com/doc'
     )
 
     const buttons: Technologies[] = [
@@ -107,7 +117,6 @@ export function TechnologyButtons() {
         buttons.forEach((button, index) => {
             b.push(
                 <div key={index}>
-
                     <button style={buttonProps}
                             onClick={() => {
                                 setActiveIndex(index);
@@ -115,7 +124,7 @@ export function TechnologyButtons() {
                             }}
                             className={"button"}
                     >
-                        <img width={48} height={48} src={button.url} alt="Technology Icon"/>
+                        <img width={48} height={48} src={button.icon} alt="Technology Icon"/>
                     </button>
 
                     <Modal
@@ -130,12 +139,15 @@ export function TechnologyButtons() {
                         <ModalOverlay/>
                         <ModalContent>
                             <ModalHeader className="modalHeader">
-                                <img width={48} height={48} src={button.url} alt="Technology Icon"/>
-                                <text>{button.technology}</text>
+                                <a href={button.url} target="_blank">
+                                    <img width={48} height={48} src={button.icon} alt="Technology Icon"/>
+                                    <text>{button.technology}</text>
+                                </a>
                             </ModalHeader>
-                            <ModalCloseButton/>
+                            <ModalCloseButton className="modalCloseButton"/>
                             <ModalBody className="modalBody">
                                 <text>{button.description}</text>
+                                <br/>
                             </ModalBody>
                         </ModalContent>
                     </Modal>
@@ -146,11 +158,17 @@ export function TechnologyButtons() {
     }
 
     return (
-        <div
-            style={buttonContainerProps}
-            className="technologyButtons"
-        >
-            {genButton(buttons)}
+        <div className="technologies">
+            <div>
+                <text>Technologies</text>
+            </div>
+
+            <div
+                style={buttonContainerProps}
+                className="technologyButtons"
+            >
+                {genButton(buttons)}
+            </div>
         </div>
     )
 }

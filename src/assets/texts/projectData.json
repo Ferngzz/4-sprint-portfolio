@@ -1,0 +1,44 @@
+{
+  "climaApp": {
+    "name": "ClimaApp",
+    "description": "In this project, my main role was to search for APIs and figure out how to use them since we were working in a group.\n\nI started by getting familiar with async functions, which felt a bit odd at first. But once I began making requests, everything started to click.\n\nI also had to brush up on working with JSONs. Looking back, I feel like I could’ve contributed more to the front end, and I'm eager to improve on that in future projects.",
+    "learned": "\nIn this project, I really leveled up my understanding of async functions and how to use APIs. Plus, since it was one of my first team projects, I had to learn how to work well with others, which was a great experience!",
+    "technologies": [
+      {
+        "name": "HTML",
+        "url": "images/html-icon.svg"
+      },
+      {
+        "name": "CSS",
+        "url": "images/css-icon.svg"
+      },
+      {
+        "name": "JavaScript",
+        "url": "images/javascript-icon.svg"
+      }
+    ],
+    "image": "/images/clima-app.png",
+    "url": "https://clima-app-swart.vercel.app/"
+  },
+  "calculadora": {
+    "name": "Calculadora",
+    "description": "Since it was my first time diving into web development, I started figuring out how to use the technologies I needed.\n\nGetting into HTML and CSS, I found structuring and styling the calculator to be the trickiest part. CSS can be a bit less intuitive than it looks, but I did my best to stick to the design.\n\nThe fun part was working on the logic; I aimed to keep the code clean and functional. There are definitely some features I think I could improve.",
+    "learned": "Once I wrapped up my project, I got a much better grasp of CSS attributes and picked up some new JavaScript techniques. Personally, I think learning how to use Arrow Functions was my biggest win in this project!",
+    "technologies": [
+      {
+        "name": "HTML",
+        "url": "images/html-icon.svg"
+      },
+      {
+        "name": "CSS",
+        "url": "images/css-icon.svg"
+      },
+      {
+        "name": "JavaScript",
+        "url": "images/javascript-icon.svg"
+      }
+    ],
+    "image": "/images/calculadora.png",
+    "url": "https://calculadora-eta-ashy.vercel.app/"
+  }
+}
