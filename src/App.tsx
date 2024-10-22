@@ -4,12 +4,10 @@ import {ProjectCarousel} from "./components/projectCarousel.tsx";
 import {TechnologyButtons} from "./components/technologyButtons.tsx";
 import {Header} from "./components/header.tsx";
 import {Profile} from "./components/profile.tsx";
-import {Name} from "./components/name.tsx";
-import {Description} from "./components/description.tsx";
-import {ProjectSection} from "./projects/projectSection.tsx";
+import {AboutMe} from "./components/aboutMe.tsx";
+import {ProjectSection} from "./components/projectSection.tsx";
 import {Project} from "./interfaces/Project.tsx";
 import {useState} from "react";
-
 
 
 export function App() {
@@ -23,8 +21,7 @@ export function App() {
             </div>
             <div className="app">
                 <div className="column left">
-                    <Name/>
-                    <Description/>
+                    <AboutMe/>
                     <ProjectCarousel onProjectSelect={setProject}/>
                 </div>
                 <div className="column right">
@@ -33,13 +30,12 @@ export function App() {
                 </div>
             </div>
 
-
             { project?
                 (
                     <div className="projectContainer">
                         <ProjectSection project={project}/>
                     </div>
-                ) : <div/>
+                ) : null
             }
         </>
     )
