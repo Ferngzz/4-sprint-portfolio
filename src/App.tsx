@@ -16,15 +16,15 @@ export function App() {
 
     return (
         <>
-            <div className="header">
+            <div>
                 <Header/>
             </div>
-            <div className="app">
-                <div className="column left">
+            <div>
+                <div>
                     <AboutMe/>
                     <ProjectCarousel onProjectSelect={setProject}/>
                 </div>
-                <div className="column right">
+                <div>
                     <Profile/>
                     <TechnologyButtons/>
                 </div>
@@ -32,7 +32,7 @@ export function App() {
 
             { project?
                 (
-                    <div className="projectContainer">
+                    <div>
                         <ProjectSection project={project}/>
                     </div>
                 ) : null

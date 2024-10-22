@@ -12,8 +12,8 @@ export function ProjectSection({project}: ProjectSectionProps) {
 
         project?.technologies.forEach((technology) => {
             t.push(
-                <div className="projectTechnology">
-                    <img width={32} height={32} src={technology.iconURL} alt="Technology Icon"/>
+                <div>
+                    <img src={technology.iconURL} alt="Technology Icon"/>
                     <text>{technology.name}</text>
                 </div>
             );
@@ -22,44 +22,44 @@ export function ProjectSection({project}: ProjectSectionProps) {
     }
 
     return (
-        <div className="projectSection">
-            <div className="projectHeader">
+        <div>
+            <div>
                 <text>{project?.name}</text>
             </div>
 
-            <div className="bodyContainer">
-                <div className="projectBody">
-                    <div className="projectProgression">
-                        <div className="whatIveDone">
+            <div>
+                <div>
+                    <div>
+                        <div>
                             <text>What I've done:</text>
                         </div>
-                        <text className="projDescription">{project?.description}</text>
+                        <text>{project?.description}</text>
                     </div>
-                    <div className="projectInfo">
-                        <div className="projectUsedTechnologies">
-                            <text className="whatIveUsed">What I've used:</text>
-                            <div className="projectTechnologies">
+                    <div>
+                        <div>
+                            <text>What I've used:</text>
+                            <div>
                                 {genTechnologies()}
                             </div>
                         </div>
                     </div>
 
-                    <div className="projectDemo">
-                        <div className="demoText">
-                            <text className="whatIveDone">What I've learned:</text>
-                            <text className="learned">{project?.learned}</text>
+                    <div>
+                        <div>
+                            <text>What I've learned:</text>
+                            <text>{project?.learned}</text>
                         </div>
 
                         <a href={project?.demoURL} target={"_blank"}>
-                            <div className="buttonBg">
-                                <button className="demoButton">
+                            <div>
+                                <button>
                                     <text>Demo</text>
                                 </button>
                             </div>
                         </a>
                         <a href={project?.githubURL} target={"_blank"}>
-                            <div className="buttonBg">
-                                <button className="demoButton">
+                            <div>
+                                <button>
                                     <text>GitHub Repository</text>
                                 </button>
                             </div>

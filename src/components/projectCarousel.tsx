@@ -15,17 +15,6 @@ interface ProjectCarouselProps {
 
 export function ProjectCarousel(props: ProjectCarouselProps) {
 
-    const projectsProps = {
-        width: '400px',
-        backgroundColor: 'transparent',
-        border: '5px solid #F39422',
-        borderRadius: '15px',
-        boxShadow: '2px 2px 2px #293A80',
-        "--swiper-pagination-color": '#F39422',
-        "--swiper-pagination-bullet-inactive-color": '#F39422',
-    }
-
-
     const projects: Project[] = [
         projectData.climaApp,
         projectData.calculadora,
@@ -52,12 +41,11 @@ export function ProjectCarousel(props: ProjectCarouselProps) {
 
 
     return (
-        <div className="projectCarousel">
+        <div>
             <div>
                 <text>Projects</text>
             </div>
             <Swiper
-                style={projectsProps}
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={400}
                 slidesPerView={1}
