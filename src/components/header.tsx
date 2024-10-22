@@ -8,7 +8,7 @@ import {
     useDisclosure
 } from "@chakra-ui/react";
 
-import contact from "../assets/texts/contact.json"
+import contact from "../assets/data/contact.json"
 
 export function Header() {
 
@@ -52,8 +52,6 @@ export function Header() {
                     </ModalHeader>
                     <ModalCloseButton/>
                     <ModalBody>
-                        <text>Phone: {contact.phone}</text>
-                        <br/>
                         <text>E-mail: {contact.email}</text>
                     </ModalBody>
                 </ModalContent>

@@ -1,6 +1,6 @@
 import {Autoplay, Navigation, Pagination} from 'swiper/modules';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import projectData from "../assets/texts/projectData.json"
+import projectData from "../assets/data/projectData.json"
 import {Project} from "../interfaces/Project.tsx"
 import 'swiper/css';
 import 'swiper/css/navigation';

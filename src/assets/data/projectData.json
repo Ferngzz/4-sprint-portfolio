@@ -6,19 +6,27 @@
     "technologies": [
       {
         "name": "HTML",
-        "url": "images/html-icon.svg"
+        "iconURL": "images/html-icon.svg",
+        "documentation": "",
+        "description": ""
       },
       {
         "name": "CSS",
-        "url": "images/css-icon.svg"
+        "iconURL": "images/css-icon.svg",
+        "documentation": "",
+        "description": ""
       },
       {
         "name": "JavaScript",
-        "url": "images/javascript-icon.svg"
+        "iconURL": "images/javascript-icon.svg",
+        "documentation": "",
+        "description": ""
       }
     ],
     "image": "/images/clima-app.png",
-    "url": "https://clima-app-swart.vercel.app/"
+    "demoURL": "https://clima-app-swart.vercel.app/",
+    "githubURL": "https://github.com/Ferngzz/Clima-App"
+
   },
   "calculadora": {
     "name": "Calculadora",
@@ -27,18 +35,25 @@
     "technologies": [
       {
         "name": "HTML",
-        "url": "images/html-icon.svg"
+        "iconURL": "images/html-icon.svg",
+        "documentation": "",
+        "description": ""
       },
       {
         "name": "CSS",
-        "url": "images/css-icon.svg"
+        "iconURL": "images/css-icon.svg",
+        "documentation": "",
+        "description": ""
       },
       {
         "name": "JavaScript",
-        "url": "images/javascript-icon.svg"
+        "iconURL": "images/javascript-icon.svg",
+        "documentation": "",
+        "description": ""
       }
     ],
     "image": "/images/calculadora.png",
-    "url": "https://calculadora-eta-ashy.vercel.app/"
+    "demoURL": "https://calculadora-eta-ashy.vercel.app/",
+    "githubURL": "https://github.com/Ferngzz/1-sprint-GrupoEstudos-Calculadora"
   }
 }

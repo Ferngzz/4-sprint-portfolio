@@ -1,5 +1,4 @@
 export function Profile() {
-
     const profileContainerProps = {
         width: '400px',
         height: '400px',

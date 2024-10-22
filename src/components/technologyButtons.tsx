@@ -1,6 +1,6 @@
 import {ReactElement, useState} from "react";
 import "../App.css";
-import texts from "../assets/texts/texts.json"
+import technologyData from "../assets/data/technology.json"
 import {
     Modal,
     ModalBody,
@@ -10,23 +10,9 @@ import {
     ModalOverlay,
     useDisclosure
 } from "@chakra-ui/react";
+import {Technology} from "../interfaces/Technology.tsx";
 
 export function TechnologyButtons() {
-
-    class Technologies {
-        technology: string;
-        icon: string;
-        description: string;
-        url: string
-
-        constructor(technology: string, icon: string, description: string, url: string) {
-            this.technology = technology;
-            this.icon = icon;
-            this.description = description;
-            this.url = url;
-        }
-    }
-
     const buttonContainerProps = {
         width: '450px',
         display: 'flex',
@@ -47,71 +33,22 @@ export function TechnologyButtons() {
         boxShadow: ' 1px 1px 1px #293A80',
     }
 
-    const js = new Technologies(
-        'JavaScript',
-        'images/javascript-icon.svg',
-        texts.js,
-        'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-    )
-    const css = new Technologies(
-        'CSS',
-        'images/css-icon.svg',
-        texts.css,
-        'https://developer.mozilla.org/en-US/docs/Web/CSS'
-    )
-    const html = new Technologies(
-        'HTML',
-        'images/html-icon.svg',
-        texts.html,
-        'https://developer.mozilla.org/en-US/docs/Web/HTML'
-    )
-    const react = new Technologies(
-        'React',
-        'images/react-icon.svg',
-        texts.react,
-        'https://react.dev/reference/react'
-    )
-    const java = new Technologies(
-        'Java',
-        'images/java-icon.svg',
-        texts.java,
-        'https://docs.oracle.com/en/java/javase/23/'
-    )
-    const kotlin = new Technologies(
-        'Kotlin',
-        'images/kotlin-icon.svg',
-        texts.kotlin,
-        'https://kotlinlang.org/docs/home.html'
-    )
-    const intellij = new Technologies(
-        'IntelliJ IDEA',
-        'images/intellij-icon.svg',
-        texts.intellij,
-        'https://www.jetbrains.com/help/idea/getting-started.html'
-    )
-    const git = new Technologies(
-        'Git',
-        'images/git-icon.svg',
-        texts.git,
-        'https://git-scm.com/doc'
-    )
-
-    const buttons: Technologies[] = [
-        js,
-        css,
-        html,
-        react,
-        java,
-        kotlin,
-        intellij,
-        git,
+    const buttons: Technology[] = [
+        technologyData.js,
+        technologyData.css,
+        technologyData.html,
+        technologyData.react,
+        technologyData.java,
+        technologyData.kotlin,
+        technologyData.git,
+        technologyData.intellij,
     ]
 
 
     const {isOpen, onOpen, onClose} = useDisclosure();
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-    const genButton = (buttons: Technologies[]) => {
+    const genButton = (buttons: Technology[]) => {
         const b: ReactElement[] = [];
 
         buttons.forEach((button, index) => {
@@ -124,7 +61,7 @@ export function TechnologyButtons() {
                             }}
                             className={"button"}
                     >
-                        <img width={48} height={48} src={button.icon} alt="Technology Icon"/>
+                        <img width={48} height={48} src={button.iconURL} alt="Technology Icon"/>
                     </button>
 
                     <Modal
@@ -139,9 +76,9 @@ export function TechnologyButtons() {
                         <ModalOverlay/>
                         <ModalContent>
                             <ModalHeader className="modalHeader">
-                                <a href={button.url} target="_blank">
-                                    <img width={48} height={48} src={button.icon} alt="Technology Icon"/>
-                                    <text>{button.technology}</text>
+                                <a href={button.documentation} target="_blank">
+                                    <img width={48} height={48} src={button.iconURL} alt="Technology Icon"/>
+                                    <text>{button.name}</text>
                                 </a>
                             </ModalHeader>
                             <ModalCloseButton className="modalCloseButton"/>

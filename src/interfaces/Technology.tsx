@@ -1,4 +1,6 @@
 export interface Technology {
     name: string;
-    url: string;
+    iconURL: string;
+    documentation: string;
+    description: string;
 }

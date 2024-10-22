@@ -13,7 +13,7 @@ export function ProjectSection({project}: ProjectSectionProps) {
         project?.technologies.forEach((technology) => {
             t.push(
                 <div className="projectTechnology">
-                    <img width={32} height={32} src={technology.url}/>
+                    <img width={32} height={32} src={technology.iconURL} alt="Technology Icon"/>
                     <text>{technology.name}</text>
                 </div>
             );
@@ -50,10 +50,17 @@ export function ProjectSection({project}: ProjectSectionProps) {
                             <text className="learned">{project?.learned}</text>
                         </div>
 
-                        <a href={project?.url} target={"_blank"}>
+                        <a href={project?.demoURL} target={"_blank"}>
                             <div className="buttonBg">
                                 <button className="demoButton">
                                     <text>Demo</text>
+                                </button>
+                            </div>
+                        </a>
+                        <a href={project?.githubURL} target={"_blank"}>
+                            <div className="buttonBg">
+                                <button className="demoButton">
+                                    <text>GitHub Repository</text>
                                 </button>
                             </div>
                         </a>
