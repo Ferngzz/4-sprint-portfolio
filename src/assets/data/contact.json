@@ -1,4 +1,20 @@
 {
-  "phone": "(51) 99999-9999",
-  "email": "fernando.gazzana@gmail.com"
+  "github": {
+    "name": "GitHub",
+    "pageURL": "https://github.com/Ferngzz",
+    "iconURL": "./images/github-header-black.svg",
+    "hasModal": false
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "pageURL": "https://www.linkedin.com/in/fernando-gazzana-4554a3195/",
+    "iconURL": "./images/linkedin-header-black.svg",
+    "hasModal": false
+  },
+  "contact": {
+    "name": "Contact",
+    "pageURL": "fernando.gazzana@gmail.com",
+    "iconURL": "./images/mail-header-black.svg",
+    "hasModal": true
+  }
 }

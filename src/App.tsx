@@ -1,5 +1,4 @@
-import './reset.css'
-import './App.css'
+import './AppOutput.css'
 import {ProjectCarousel} from "./components/projectCarousel.tsx";
 import {TechnologyButtons} from "./components/technologyButtons.tsx";
 import {Header} from "./components/header.tsx";

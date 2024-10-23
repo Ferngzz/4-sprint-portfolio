@@ -7,55 +7,63 @@ import {
     ModalOverlay,
     useDisclosure
 } from "@chakra-ui/react";
-
-import contact from "../assets/data/contact.json"
+import contactData from "../assets/data/contact.json";
+import {Contact} from "../interfaces/Contact.tsx";
+import {ReactElement} from "react";
 
 export function Header() {
 
     const {isOpen, onOpen, onClose} = useDisclosure();
 
+    const buttons: Contact[] = [
+        contactData.github,
+        contactData.linkedin,
+        contactData.contact
+    ]
+
+
+    const genNavButtons = (buttons: Contact[]) => {
+        const b: ReactElement[] = [];
+        buttons.forEach((button) => {
+            b.push(
+                <div>
+                    <a href={button.pageURL} target="_blank" rel="noopener noreferrer">
+                        <button
+                            className="flex flex-row"
+                            onClick={button.hasModal ? onOpen : undefined}
+                        >
+                            <img className="size-10" src={button.iconURL} alt="GitHub Logo"/>
+                            <text>{button.name}</text>
+                        </button>
+                    </a>
+                    if (button.hasModal) {
+                    <Modal
+                        closeOnOverlayClick={true}
+                        isOpen={isOpen}
+                        onClose={onClose}
+                        isCentered
+                    >
+                        <ModalOverlay/>
+                        <ModalContent>
+                            <ModalHeader>
+                                <text>Contact:</text>
+                            </ModalHeader>
+                            <ModalCloseButton/>
+                            <ModalBody>
+                                <text>E-mail: {button.pageURL}</text>
+                            </ModalBody>
+                        </ModalContent>
+                    </Modal>
+                }
+                </div>
+            )
+        })
+        return b;
+    }
 
     return (
-        <div>
-            <a href={"https://github.com/Ferngzz"} target="_blank">
-                <button>
-                    <img src={'images/github-header-black.svg'} alt="GitHub Logo"/>
-                    <text>GitHub</text>
-                </button>
-            </a>
-
-            <a href={"https://www.linkedin.com/in/fernando-gazzana-4554a3195/"} target="_blank">
-                <button>
-                    <img src={'images/linkedin-header-black.svg'} alt="LinkedIn Logo"/>
-                    <text>LinkedIn</text>
-                </button>
-            </a>
-
-            <a>
-                <button
-                    onClick={onOpen}
-                >
-                    <img src={'images/mail-header-black.svg'} alt="Contact Logo"/>
-                    <text>Contact</text>
-                </button>
-            </a>
-            <Modal
-                closeOnOverlayClick={true}
-                isOpen={isOpen}
-                onClose={onClose}
-                isCentered
-            >
-                <ModalOverlay/>
-                <ModalContent>
-                    <ModalHeader>
-                        <text>Contact:</text>
-                    </ModalHeader>
-                    <ModalCloseButton/>
-                    <ModalBody>
-                        <text>E-mail: {contact.email}</text>
-                    </ModalBody>
-                </ModalContent>
-            </Modal>
+        <div className="bg-orange w-full h-10 flex justify-center">
+            {genNavButtons(buttons)}
         </div>
     );
 }
